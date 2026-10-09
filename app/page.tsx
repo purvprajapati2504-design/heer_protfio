@@ -7,7 +7,6 @@ import {
   ArrowRight,
   BadgeCheck,
   Bot,
-  Brain,
   Code2,
   Cpu,
   Download,
@@ -33,7 +32,7 @@ import {
   Award,
   Database,
   Cloud,
-  FileText
+  Laptop
 } from "lucide-react";
 
 interface Certificate {
@@ -160,22 +159,15 @@ const certificates: Certificate[] = [
   }
 ];
 
+// EXACT TECHNICAL SKILLS AS REQUESTED:
+// HTML, CSS, PYTHON, PHP, SQL, SUPABSE
 const technicalSkills = [
-  "Python",
+  "HTML",
+  "CSS",
+  "PYTHON",
   "PHP",
   "SQL",
-  "HTML5",
-  "CSS3",
-  "JavaScript",
-  "Supabase",
-  "MySQL",
-  "Docker",
-  "Spring 5 Basics",
-  "Tableau Desktop",
-  "Data Science Concepts",
-  "Git & GitHub",
-  "Windows OS",
-  "REST APIs"
+  "SUPABSE"
 ];
 
 const coreStrengths = [
@@ -194,7 +186,7 @@ const projects = [
     icon: <Globe className="h-5 w-5 text-indigo-400" />,
     description:
       "Web-based grocery shopping concept designed to help users browse, filter, and purchase grocery products seamlessly with cart management and relational database backend.",
-    tags: ["PHP", "SQL / MySQL", "HTML5", "CSS3", "JavaScript", "Responsive UI"],
+    tags: ["PHP", "SQL", "HTML", "CSS", "Responsive UI"],
     highlights: "Catalog search, shopping cart state, session authentication, and database order processing."
   },
   {
@@ -203,7 +195,7 @@ const projects = [
     icon: <Bot className="h-5 w-5 text-cyan-400" />,
     description:
       "Online interview-practice platform that helps candidates practise interview responses in real time and review automated evaluation scores and actionable feedback.",
-    tags: ["Python", "Supabase", "AI/ML Logic", "Web UI", "SQL", "Analytics"],
+    tags: ["PYTHON", "SUPABSE", "AI/ML Logic", "Web UI", "SQL"],
     highlights: "Question sequencing, instant response evaluation, performance scoring, and persistent progress logs."
   }
 ];
@@ -367,7 +359,7 @@ export default function Home() {
             </h2>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
-              Motivated MCA student (2025–2027) and BCA graduate (CGPA 8.16) with a solid foundation in software development, web technologies, and database architecture. Familiar with Python, PHP, SQL, Supabase, Cloud fundamentals, and Docker.
+              Motivated MCA student (2025–2027) and BCA graduate (CGPA 8.16) with a solid foundation in software development, web technologies, and database architecture. Familiar with HTML, CSS, PYTHON, PHP, SQL, SUPABSE.
             </p>
 
             {/* Direct Primary Action Buttons */}
@@ -494,10 +486,10 @@ export default function Home() {
               {/* 4 Feature Cards */}
               <div className="mt-7 grid grid-cols-2 gap-3.5">
                 {[
-                  { icon: <Terminal className="h-4 w-4 text-cyan-300" />, label: "Python & OOP" },
-                  { icon: <Globe className="h-4 w-4 text-indigo-300" />, label: "PHP & Web Dev" },
-                  { icon: <Database className="h-4 w-4 text-fuchsia-300" />, label: "SQL & Supabase" },
-                  { icon: <Cloud className="h-4 w-4 text-teal-300" />, label: "Docker & Cloud" }
+                  { icon: <Terminal className="h-4 w-4 text-cyan-300" />, label: "PYTHON" },
+                  { icon: <Globe className="h-4 w-4 text-indigo-300" />, label: "PHP & Web" },
+                  { icon: <Database className="h-4 w-4 text-fuchsia-300" />, label: "SQL & SUPABSE" },
+                  { icon: <Code2 className="h-4 w-4 text-teal-300" />, label: "HTML & CSS" }
                 ].map((item) => (
                   <div
                     key={item.label}
@@ -528,7 +520,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold">About Me</h3>
             </div>
             <p className="mt-5 leading-8 text-white/70 text-sm sm:text-base">
-              Motivated MCA student at Ganpat University and BCA graduate with Distinction (CGPA: 8.16). I possess a solid foundation in software development, web technologies, database management, and cloud basics.
+              Motivated MCA student at Ganpat University and BCA graduate with Distinction (CGPA: 8.16). I possess a solid foundation in software development, web technologies, database management, and cloud basics. Familiar with Html, Css, Python, Php, Sql, Supabse.
             </p>
             <p className="mt-4 leading-8 text-white/70 text-sm sm:text-base">
               Eager to apply technical knowledge, contribute to practical projects, and continue learning emerging technologies. Experienced in developing full-stack web applications and AI evaluation workflows.
@@ -565,13 +557,16 @@ export default function Home() {
             </div>
 
             <div className="mt-6 p-4 rounded-2xl border border-indigo-400/20 bg-indigo-500/10 text-xs text-indigo-200">
-              <p className="font-semibold text-white mb-1">Operating System & Tools:</p>
-              <p className="text-white/70">Windows OS Environment • VS Code • Git & GitHub • Modern Web Browsers</p>
+              <p className="font-semibold text-white mb-1 flex items-center gap-1.5">
+                <Laptop className="h-4 w-4 text-cyan-300" />
+                Operating System:
+              </p>
+              <p className="text-white/85 font-medium">Windows</p>
             </div>
           </motion.div>
         </section>
 
-        {/* TECHNICAL SKILLS SECTION */}
+        {/* TECHNICAL SKILLS SECTION (EXACTLY HTML, CSS, PYTHON, PHP, SQL, SUPABSE) */}
         <section className="py-12" id="skills">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -580,22 +575,35 @@ export default function Home() {
             transition={{ duration: 0.55 }}
             className="rounded-[2.5rem] border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
           >
-            <div className="flex items-center gap-3">
-              <Layers3 className="h-5 w-5 text-indigo-300" />
-              <h3 className="text-2xl font-bold">Technical Skills</h3>
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <div className="flex items-center gap-3">
+                <Layers3 className="h-5 w-5 text-indigo-300" />
+                <h3 className="text-2xl font-bold">Technical Skills</h3>
+              </div>
+              <div className="flex items-center gap-2 text-xs font-semibold text-cyan-300 bg-cyan-950/40 border border-cyan-800/40 px-3 py-1.5 rounded-full">
+                <Laptop className="h-3.5 w-3.5" />
+                Operating System: Windows
+              </div>
             </div>
+
             <p className="mt-2 text-sm text-white/60">
-              Key programming languages, frameworks, databases, and DevOps tools verified through coursework and projects.
+              Programming &amp; Core Technical Stack:
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-2.5">
+            {/* Exactly the 6 requested technical skills */}
+            <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5">
               {technicalSkills.map((skill) => (
-                <span
+                <div
                   key={skill}
-                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs sm:text-sm font-semibold text-white/90 hover:bg-white/10 hover:border-indigo-400/40 transition"
+                  className="rounded-2xl border border-white/10 bg-white/[0.06] p-4 text-center backdrop-blur hover:border-indigo-400/50 hover:bg-white/[0.1] transition-all hover:scale-[1.03]"
                 >
-                  {skill}
-                </span>
+                  <p className="text-base sm:text-lg font-black tracking-wider text-white">
+                    {skill}
+                  </p>
+                  <span className="text-[10px] text-indigo-300 font-medium uppercase mt-0.5 block">
+                    Core Skill
+                  </span>
+                </div>
               ))}
             </div>
           </motion.div>
@@ -657,7 +665,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CERTIFICATIONS SECTION (11+ VERIFIED CERTIFICATES) */}
+        {/* CERTIFICATIONS SECTION (ONLY VIEW/SHOW - NO DOWNLOAD) */}
         <section className="py-12" id="certificates">
           <div className="mb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
@@ -666,7 +674,7 @@ export default function Home() {
               </p>
               <h3 className="text-3xl font-black mt-1">11+ Verified Certifications</h3>
               <p className="text-xs sm:text-sm text-white/60 mt-1">
-                Infosys Springboard, IBM SkillsBuild & Skill India. Click to open PDF or preview.
+                Infosys Springboard, IBM SkillsBuild &amp; Skill India. Click &quot;Open PDF&quot; or &quot;Preview&quot; to inspect credentials.
               </p>
             </div>
 
@@ -708,7 +716,7 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Certificates Grid */}
+          {/* Certificates Grid - VIEW ONLY, NO DOWNLOAD BUTTON */}
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {filteredCertificates.map((cert) => (
               <motion.div
@@ -744,7 +752,8 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="mt-5 pt-4 border-t border-white/10 space-y-2">
+                {/* ONLY SHOW / VIEW ACTIONS - NO DOWNLOAD */}
+                <div className="mt-5 pt-4 border-t border-white/10">
                   <div className="grid grid-cols-2 gap-2">
                     {/* Open in tab */}
                     <a
@@ -752,7 +761,7 @@ export default function Home() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-white px-3 py-2 text-xs font-semibold text-slate-950 transition hover:bg-white/90 shadow-sm"
-                      title="Open full PDF in a new browser tab"
+                      title="Open full PDF to view in new tab"
                     >
                       <ExternalLink className="h-3.5 w-3.5" />
                       Open PDF
@@ -762,25 +771,11 @@ export default function Home() {
                     <button
                       onClick={() => setActiveModalPdf(cert)}
                       className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-white/12 bg-white/5 px-3 py-2 text-xs font-semibold text-white transition hover:bg-white/10 cursor-pointer"
-                      title="Quick preview certificate modal"
+                      title="Preview certificate on page"
                     >
                       <Eye className="h-3.5 w-3.5 text-cyan-300" />
                       Preview
                     </button>
-                  </div>
-
-                  <div className="flex items-center justify-between text-[11px] text-white/50 pt-1">
-                    <span className="truncate max-w-[170px]" title={cert.originalName}>
-                      {cert.originalName}
-                    </span>
-                    <a
-                      href={`/certificates/${cert.filename}`}
-                      download={cert.originalName}
-                      className="text-indigo-300 hover:text-white font-medium flex items-center gap-1"
-                    >
-                      <Download className="h-3 w-3" />
-                      Download
-                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -808,7 +803,7 @@ export default function Home() {
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-indigo-300">
               Academic Background
             </p>
-            <h3 className="text-3xl font-black mt-1">Education & Qualifications</h3>
+            <h3 className="text-3xl font-black mt-1">Education &amp; Qualifications</h3>
           </div>
 
           <div className="space-y-4">
@@ -840,7 +835,7 @@ export default function Home() {
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-rose-300">
               Get in Touch
             </p>
-            <h3 className="text-3xl font-black mt-1">Direct Contact & Channels</h3>
+            <h3 className="text-3xl font-black mt-1">Direct Contact &amp; Channels</h3>
             <p className="text-sm text-white/60 mt-1">
               Click any of the links below to connect directly with Heer Prajapati.
             </p>
@@ -857,7 +852,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h5 className="text-base font-bold text-white">LinkedIn Profile</h5>
-                    <p className="text-xs text-blue-200">Connect for internships & developer roles</p>
+                    <p className="text-xs text-blue-200">Connect for internships &amp; developer roles</p>
                   </div>
                 </div>
 
@@ -1012,7 +1007,7 @@ export default function Home() {
         </footer>
       </div>
 
-      {/* MODAL: INTERACTIVE PDF VIEWER */}
+      {/* MODAL: INTERACTIVE PDF VIEWER (SHOW / PREVIEW ONLY - NO DOWNLOAD BUTTON) */}
       {activeModalPdf && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md">
           <div className="relative w-full max-w-4xl h-[85vh] bg-[#0c1220] border border-white/15 rounded-3xl shadow-2xl flex flex-col overflow-hidden">
@@ -1022,7 +1017,7 @@ export default function Home() {
                   {activeModalPdf.name}
                 </h4>
                 <p className="text-xs text-white/60">
-                  {activeModalPdf.issuer} • {activeModalPdf.originalName}
+                  {activeModalPdf.issuer} • Verified Credential
                 </p>
               </div>
 
@@ -1031,16 +1026,9 @@ export default function Home() {
                   href={`/certificates/${activeModalPdf.filename}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full bg-white px-3.5 py-1.5 text-xs font-semibold text-slate-950 transition hover:bg-white/90"
+                  className="rounded-full bg-white px-4 py-1.5 text-xs font-semibold text-slate-950 transition hover:bg-white/90"
                 >
                   Open in Tab
-                </a>
-                <a
-                  href={`/certificates/${activeModalPdf.filename}`}
-                  download={activeModalPdf.originalName}
-                  className="rounded-full border border-white/12 bg-white/10 px-3.5 py-1.5 text-xs font-semibold text-white transition hover:bg-white/20"
-                >
-                  Download
                 </a>
                 <button
                   onClick={() => setActiveModalPdf(null)}
@@ -1053,14 +1041,14 @@ export default function Home() {
 
             <div className="flex-1 w-full bg-slate-950">
               <iframe
-                src={`/certificates/${activeModalPdf.filename}#toolbar=1&navpanes=0`}
+                src={`/certificates/${activeModalPdf.filename}#toolbar=0&navpanes=0`}
                 className="w-full h-full border-none"
                 title={activeModalPdf.name}
               />
             </div>
 
             <div className="p-3 bg-white/[0.02] border-t border-white/10 flex items-center justify-between text-xs text-white/50 px-5">
-              <span>Path: <code className="text-indigo-300 font-mono text-[11px]">D:\heer\certificate\{activeModalPdf.originalName}</code></span>
+              <span>Verified Credential • {activeModalPdf.issuer}</span>
               <button
                 onClick={() => setActiveModalPdf(null)}
                 className="text-xs text-indigo-300 hover:text-white font-medium cursor-pointer"
