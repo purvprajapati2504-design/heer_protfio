@@ -219,6 +219,42 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b0a_1px,transparent_1px),linear-gradient(to_bottom,#1e293b0a_1px,transparent_1px)] bg-[size:4rem_4rem]" />
       </div>
 
+      {/* Floating Quick Action Widget */}
+      <aside aria-label="Quick contact links" className="fixed bottom-6 right-6 z-40 hidden sm:flex items-center gap-2 p-2 rounded-2xl glass-card border border-indigo-500/40 shadow-2xl backdrop-blur-xl">
+        <a
+          href="https://www.linkedin.com/in/heer-prajapati-a3730a2b1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-blue-600/90 hover:bg-blue-600 text-white text-xs font-semibold shadow-lg shadow-blue-600/30 transition-all hover:scale-105 active:scale-95"
+          title="Open LinkedIn Profile in new tab"
+        >
+          <LinkedInIcon className="w-4 h-4 fill-current text-white" />
+          <span>LinkedIn</span>
+          <ExternalLink className="w-3 h-3 text-blue-200" />
+        </a>
+
+        <a
+          href="mailto:heerprajapati017@gmail.com"
+          className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white text-xs font-semibold shadow-lg shadow-indigo-600/30 transition-all hover:scale-105 active:scale-95"
+          title="Open Default Email App"
+        >
+          <Mail className="w-4 h-4 text-white" />
+          <span>Email Me</span>
+        </a>
+
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=heerprajapati017@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-rose-600/90 hover:bg-rose-600 text-white text-xs font-semibold shadow-lg shadow-rose-600/30 transition-all hover:scale-105 active:scale-95"
+          title="Open in Gmail Web Browser"
+        >
+          <Mail className="w-3.5 h-3.5 text-white" />
+          <span>Gmail Web</span>
+          <ExternalLink className="w-3 h-3 text-rose-200" />
+        </a>
+      </aside>
+
       {/* Top Banner */}
       <div className="relative z-50 bg-gradient-to-r from-indigo-950/80 via-slate-900 to-indigo-950/80 border-b border-indigo-500/20 text-xs text-slate-300 py-2 px-4 text-center">
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-2">
@@ -284,7 +320,39 @@ export default function Home() {
           </nav>
 
           {/* Action Buttons */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden sm:flex items-center gap-2.5">
+            <a
+              href="https://www.linkedin.com/in/heer-prajapati-a3730a2b1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-blue-600 hover:bg-blue-500 text-white shadow-md shadow-blue-600/30 transition-all hover:scale-105 active:scale-95"
+              title="Open LinkedIn directly in new tab"
+            >
+              <LinkedInIcon className="w-3.5 h-3.5 fill-current text-white" />
+              <span>LinkedIn</span>
+              <ExternalLink className="w-3 h-3 text-blue-200" />
+            </a>
+
+            <a
+              href="mailto:heerprajapati017@gmail.com"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 hover:border-slate-600 transition-all shadow-sm"
+              title="Open default email application"
+            >
+              <Mail className="w-3.5 h-3.5 text-rose-400" />
+              <span>Email</span>
+            </a>
+
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=heerprajapati017@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-rose-600/90 hover:bg-rose-600 text-white shadow-sm transition-all hover:scale-105 active:scale-95"
+              title="Open directly in Gmail web browser"
+            >
+              <ExternalLink className="w-3.5 h-3.5 text-rose-200" />
+              <span>Gmail Web</span>
+            </a>
+
             <a
               href="/Heer_Prajapati_Resume.pdf"
               download="Heer_Prajapati_Resume.pdf"
@@ -447,24 +515,44 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* Social links row */}
-              <div className="pt-2 flex items-center justify-center lg:justify-start gap-3">
+              {/* Direct Clickable Hyperlinks Row */}
+              <div className="p-3.5 rounded-2xl glass-card border border-indigo-500/30 flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                <span className="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                  Direct Clickable Links:
+                </span>
+
                 <a
                   href="https://www.linkedin.com/in/heer-prajapati-a3730a2b1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-950/40 hover:bg-blue-900/60 text-blue-300 border border-blue-800/50 text-xs font-medium transition-all"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold shadow-md shadow-blue-600/30 transition-all hover:scale-105 active:scale-95"
+                  title="Directly Open LinkedIn Profile"
                 >
-                  <LinkedInIcon className="w-3.5 h-3.5 fill-current text-blue-400" />
-                  LinkedIn Profile
-                  <ExternalLink className="w-3 h-3 text-blue-400" />
+                  <LinkedInIcon className="w-3.5 h-3.5 fill-current text-white" />
+                  <span>Open LinkedIn</span>
+                  <ExternalLink className="w-3 h-3 text-blue-200" />
                 </a>
+
                 <a
                   href="mailto:heerprajapati017@gmail.com"
-                  className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-medium transition-all"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white text-xs font-bold shadow-md shadow-indigo-600/30 transition-all hover:scale-105 active:scale-95"
+                  title="Send Email via Mail App"
                 >
-                  <Mail className="w-3.5 h-3.5 text-rose-400" />
-                  heerprajapati017@gmail.com
+                  <Mail className="w-3.5 h-3.5 text-white" />
+                  <span>Direct Email (App)</span>
+                </a>
+
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=heerprajapati017@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold shadow-md shadow-rose-600/30 transition-all hover:scale-105 active:scale-95"
+                  title="Directly Open Gmail in Browser"
+                >
+                  <Mail className="w-3.5 h-3.5 text-white" />
+                  <span>Direct Gmail (Browser)</span>
+                  <ExternalLink className="w-3 h-3 text-rose-200" />
                 </a>
               </div>
             </div>
@@ -1281,6 +1369,24 @@ export default function Home() {
                 >
                   heerprajapati017@gmail.com
                 </a>
+                <div className="pt-2 flex items-center gap-2">
+                  <a
+                    href="mailto:heerprajapati017@gmail.com"
+                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-indigo-600 text-white text-[11px] font-semibold hover:bg-indigo-500"
+                  >
+                    <Mail className="w-3 h-3" />
+                    Mail App
+                  </a>
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=heerprajapati017@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-rose-600 text-white text-[11px] font-semibold hover:bg-rose-500"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                    Gmail Web
+                  </a>
+                </div>
               </div>
 
               {/* Phone Card */}
